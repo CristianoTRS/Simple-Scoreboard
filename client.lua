@@ -11,19 +11,19 @@ function ShowUI(focus, data)
 end
 
 RegisterNUICallback('close', function()
-    ShowUI(false, {action = 'hide', extra = nil})
+    ShowUI(false, {action = 'hide', players = nil, config = nil})
 end)
 
 Citizen.CreateThread(function()
     while true do
         Citizen.Wait(0)
         if IsControlJustPressed(0, 51) then
-            TriggerServerEvent('ui:getPlayers')
+            TriggerServerEvent('simplescoreboard:getPlayers')
         end
     end
 end)
 
-RegisterNetEvent('ui:showPlayers')
-AddEventHandler('ui:showPlayers', function(data)
+RegisterNetEvent('simplescoreboard:showPlayers')
+AddEventHandler('simplescoreboard:showPlayers', function(data)
     ShowUI(true, {action = 'show', players = data, config = Config})
 end)

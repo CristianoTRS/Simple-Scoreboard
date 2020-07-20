@@ -1,6 +1,6 @@
 Config = {}
 
-Config.ShowNames = true
+Config.ShowNames = false
 Config.ShowJobs = true
 Config.ShowId = true
-Config.ShowPing = true
+Config.ShowPing = false

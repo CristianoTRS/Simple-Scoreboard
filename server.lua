@@ -30,10 +30,10 @@ function GetOnlinePlayers()
     return Players
 end
 
-RegisterNetEvent('ui:getPlayers')
-AddEventHandler('ui:getPlayers', function()
+RegisterNetEvent('simplescoreboard:getPlayers')
+AddEventHandler('simplescoreboard:getPlayers', function()
 
     local _source = source
 
-    TriggerClientEvent('ui:showPlayers', source, GetOnlinePlayers())
+    TriggerClientEvent('simplescoreboard:showPlayers', source, GetOnlinePlayers())
 end)

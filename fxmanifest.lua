@@ -21,3 +21,7 @@ server_scripts {
 files {
     'html/*'
 }
+
+depedencies {
+    'esx_vehicleshop'
+}
