@@ -51,7 +51,7 @@ $(function() {
 
     document.onkeyup = function (data) {
         if (data.which == 27 || data.which == 8) {
-            $.post('http://ui/close', JSON.stringify({}));
+            $.post('http://simplescoreboard/close', JSON.stringify({}))
         }
     };
 })
